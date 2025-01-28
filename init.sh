@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NODE_IP="255.255.255.255"
-MASSA_WALLET_ADDRESS="AU12...abcd"
+NODE_IP="185.241.227.143"
+MASSA_WALLET_ADDRESS="AU1pEsWUAadbaGQppLKLoCLXFVmfjFRDWu1wwwYqxSyUaLHHovZz"
 
 jsonExporterConfigPath="jsonexporter/config.yml"
 prometheusConfigPath="prometheus/prometheus.yml"

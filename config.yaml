@@ -1,0 +1,5 @@
+nodes:
+- name: "My node #1"
+  url: http://92.41.148.138:50051
+- name: "My node #2"
+  url: http://<your_node_ip_address_or_hostname>:<your_node_port>

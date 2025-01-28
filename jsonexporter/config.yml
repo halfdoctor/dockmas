@@ -8,7 +8,7 @@ modules:
            "jsonrpc": "2.0",
           "id": 1,
           "method": "get_addresses",
-          "params": [["YOUR_MASSA_ADDRESS"]]
+          "params": [["AU1pEsWUAadbaGQppLKLoCLXFVmfjFRDWu1wwwYqxSyUaLHHovZz"]]
         }
 
     metrics:
