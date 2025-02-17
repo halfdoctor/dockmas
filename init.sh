@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NODE_IP="185.241.227.143"
+NODE_IP="92.41.211.148"
 MASSA_WALLET_ADDRESS="AU1pEsWUAadbaGQppLKLoCLXFVmfjFRDWu1wwwYqxSyUaLHHovZz"
 
 jsonExporterConfigPath="jsonexporter/config.yml"
