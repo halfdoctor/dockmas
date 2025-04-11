@@ -76,4 +76,22 @@ groups:
       severity: info
     annotations:
       summary: "Time to buy a new roll"
-      description: "You wallet contains more than 100 $MASSA, it's time to buy a new roll!"
+      description: "Your wallet contains more than 100 $MASSA, it's time to buy a new roll!"
+      
+  - alert: massa_node_offline
+    expr: massa_getstatus_network_stats_current_cycle == 0
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Massa node offline"
+      description: "Your Massa node appears to be offline or not responding."
+      
+  - alert: massa_low_connectivity
+    expr: massa_getstatus_network_stats_in_connection_count + massa_getstatus_network_stats_out_connection_count < 5
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Low network connectivity"
+      description: "Your Massa node has few peer connections, which may affect performance."

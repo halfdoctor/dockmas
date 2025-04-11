@@ -85,6 +85,56 @@
     "liveNow": false,
     "panels": [
         {
+            "title": "Block Production Rate",
+            "datasource": "Prometheus",
+            "targets": [
+            {
+                "expr": "rate(massa_getadd_cycle_block_produit[5m])",
+                "legendFormat": "Blocks/min"
+            }
+            ]
+        },
+        {
+            "title": "Block Production Success Rate",
+            "datasource": "Prometheus",
+            "targets": [
+            {
+                "expr": "sum(massa_getadd_cycle_block_produit) / (sum(massa_getadd_cycle_block_produit) + sum(massa_getadd_cycle_block_echoue)) * 100",
+                "legendFormat": "Success %"
+            }
+            ]
+        },
+        {
+            "title": "Wallet Balance",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "massa_getadd_roll_final_balance",
+                "legendFormat": "Balance"
+              }
+            ]
+          },
+          {
+            "title": "Balance Change",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "delta(massa_getadd_roll_final_balance[24h])",
+                "legendFormat": "24h change"
+              }
+            ]
+          },
+          {
+            "title": "Staking Rewards",
+            "datasource": "Prometheus",
+            "targets": [
+              {
+                "expr": "176256 * (sum(massa_getadd_roll_final_roll) / sum(rolls))",
+                "legendFormat": "Daily rewards"
+              }
+            ]
+          },
+        {
             "collapsed": false,
             "gridPos": {
                 "h": 1,
